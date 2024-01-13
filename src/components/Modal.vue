@@ -7,7 +7,7 @@
 <template>
   <div v-if="show" class="modal-mask">
     <div class="modal-container">
-      <div>default body</div>
+      <slot></slot>
 
       <footer class="modal-footer">
         <slot name="footer">
