@@ -7,11 +7,17 @@
 <template>
   <div v-if="show" class="modal-mask">
     <div class="modal-container">
-      <header>Header Text</header>
+      <header>
+        <slot name="header">default header</slot>
+      </header>
 
-      <div>Main Text</div>
+      <div>default body</div>
 
-      <footer><button @click="$emit('close')">Close</button></footer>
+      <footer>
+        <slot name="footer">
+          <button @click="$emit('close')">Default Close</button>
+        </slot>
+      </footer>
     </div>
   </div>
 </template>
