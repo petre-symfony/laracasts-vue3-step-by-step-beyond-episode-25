@@ -10,11 +10,11 @@
 </script>
 
 <template>
-  <TeamHeader :team="team" />
+  <TeamHeader />
 
   <div class="place-self-center flex flex-col gap-y-3">
-    <TeamMembers :team="team" />
+    <TeamMembers />
 
   </div>
-  <TeamFooter :team="team" />
+  <TeamFooter />
 </template>
