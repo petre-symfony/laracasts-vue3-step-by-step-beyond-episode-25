@@ -7,5 +7,12 @@ export let useTeamStore = defineStore('team', {
       spots: 0,
       members: []
     }
+  },
+  actions: {
+    fill() {
+      import('@/team.json').then(r => {
+        console.log(r)
+      })
+    }
   }
 })
