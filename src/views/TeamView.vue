@@ -1,8 +1,7 @@
 <script setup>
   import TeamMember from "@/components/Teams/TeamMember.vue";
   import team from "@/team.json";
-
-  console.log(team);
+  
 </script>
 
 <template>
@@ -36,11 +35,7 @@
         <th class="text-left px-6 py-2">Status</th>
       </thead>
       <tbody>
-        <TeamMember name="James Doe" email="james@doe.com" status="Active"></TeamMember>
-        <TeamMember name="John Doe" email="john@doe.com" status="Active"></TeamMember>
-        <TeamMember name="Sarah Doe" email="sarah@doe.com" status="Active"></TeamMember>
-        <TeamMember name="Steven Doe" email="steven@doe.com" status="Active"></TeamMember>
-        <TeamMember name="Jen Doe" email="jen@doe.com" status="Active"></TeamMember>
+        <TeamMember v-for="member in team" :name="member.name" :email="member.email" :status="member.status"></TeamMember>
       </tbody>
     </table>
     <p class="text-right text-gray-600 italic">
