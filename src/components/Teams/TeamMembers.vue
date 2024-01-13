@@ -1,5 +1,6 @@
 <script setup>
   import TeamMember from "@/components/Teams/TeamMember.vue";
+  import team from "@/team.json";
 
   defineProps({
     team: Object
@@ -17,4 +18,8 @@
     <TeamMember v-for="member in team.members" :name="member.name" :email="member.email" :status="member.status"></TeamMember>
     </tbody>
   </table>
+
+  <p class="text-right text-gray-600 italic" v-show="team.members.length === team.spots">
+    There are no remaining team spots. Upgrade to add more.
+  </p>
 </template>
