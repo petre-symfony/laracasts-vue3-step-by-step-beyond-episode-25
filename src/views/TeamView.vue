@@ -1,7 +1,7 @@
 <script setup>
   import TeamMember from "@/components/Teams/TeamMember.vue";
   import team from "@/team.json";
-  
+
 </script>
 
 <template>
