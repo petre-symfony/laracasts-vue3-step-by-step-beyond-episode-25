@@ -20,5 +20,5 @@
 
   </div>
   <TeamFooter />
-  <Modal :show="showModal"/>
+  <Modal :show="showModal" @close="showModal = false"/>
 </template>

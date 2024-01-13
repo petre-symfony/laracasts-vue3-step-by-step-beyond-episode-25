@@ -11,7 +11,7 @@
 
       <div>Main Text</div>
 
-      <footer>footer</footer>
+      <footer><button @click="$emit('close')">Close</button></footer>
     </div>
   </div>
 </template>
