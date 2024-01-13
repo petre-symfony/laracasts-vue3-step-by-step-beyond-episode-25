@@ -1,9 +1,11 @@
 <script setup>
-
+  defineProps({
+    show: Boolean
+  })
 </script>
 
 <template>
-  <div class="modal-mask">
+  <div v-if="show" class="modal-mask">
     <div class="modal-container">
       <header>Header Text</header>
 

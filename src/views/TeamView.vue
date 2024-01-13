@@ -21,5 +21,5 @@
 
   </div>
   <TeamFooter />
-  <Modal />
+  <Modal/>
 </template>
