@@ -25,5 +25,8 @@
   .modal-container {
     background: white;
     padding: 1rem;
+    width: 80vw;
+
+    max-width: 500px;
   }
 </style>
