@@ -3,7 +3,7 @@
   import TeamHeader from "@/components/Teams/TeamHeader.vue";
   import TeamFooter from "@/components/Teams/TeamFooter.vue";
   import { useTeamStore } from "@/stores/TeamStores.js";
-
+  import Modal from "@/components/Modal.vue";
 
   let team = useTeamStore();
   team.fill();
@@ -21,4 +21,5 @@
 
   </div>
   <TeamFooter />
+  <Modal />
 </template>
