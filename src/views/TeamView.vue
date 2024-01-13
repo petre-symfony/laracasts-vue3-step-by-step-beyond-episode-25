@@ -4,22 +4,21 @@
   import TeamFooter from "@/components/Teams/TeamFooter.vue";
   import { useTeamStore } from "@/stores/TeamStores.js";
   import Modal from "@/components/Modal.vue";
+  import {ref} from "vue";
 
   let team = useTeamStore();
   team.fill();
 
-  setTimeout(() => {
-    team.grow(25)
-  }, 2000);
+  let showModal = ref(false);
 </script>
 
 <template>
-  <TeamHeader />
+  <TeamHeader @add="showModal = true"/>
 
   <div class="place-self-center flex flex-col gap-y-3">
     <TeamMembers />
 
   </div>
   <TeamFooter />
-  <Modal/>
+  <Modal :show="showModal"/>
 </template>
