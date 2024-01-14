@@ -15,7 +15,7 @@
   >
     Add Member ({{ team.spotsRemaining }} Spots Left)
   </button>
-  <Teleport to="body">
+  <Teleport to="#hello">
     <Modal :show="showModal" @close="showModal = false">
       <template #default>
         <p>Need to add a new member to your team?</p>
