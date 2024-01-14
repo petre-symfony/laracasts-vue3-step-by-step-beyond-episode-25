@@ -50,14 +50,14 @@
   .modal-footer button:hover {
     background: #c8c8cb;
   }
-  .mudal-enter-active {
+  .mudal-enter-active, .modal-leave-active {
     /*@apply duration-300; */
     transition: opacity .3s;
   }
-  .modal-enter-from {
+  .modal-enter-from, .modal-leave-to {
     opacity: 0;
   }
-  .modal-enter-to {
+  .modal-enter-to, .modal-leave-from {
     opacity: 100;
   }
 </style>
