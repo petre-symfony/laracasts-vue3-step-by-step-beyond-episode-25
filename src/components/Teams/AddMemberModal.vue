@@ -4,6 +4,12 @@
   import { useTeamStore } from "@/stores/TeamStores.js";
 
   let showModal = ref(false);
+  let loaded = ref(false);
+
+  setTimeout(() => {
+    loaded.value = true;
+  }, 2000)
+
   let team = useTeamStore();
 </script>
 
@@ -15,7 +21,7 @@
   >
     Add Member ({{ team.spotsRemaining }} Spots Left)
   </button>
-  <Teleport to="#hello">
+  <Teleport v-if="loaded" to="#hello">
     <Modal :show="showModal" @close="showModal = false">
       <template #default>
         <p>Need to add a new member to your team?</p>
