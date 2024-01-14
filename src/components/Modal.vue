@@ -5,17 +5,22 @@
 </script>
 
 <template>
-  <div v-if="show" class="modal-mask">
-    <div class="modal-container">
-      <slot></slot>
+  <transition
+      enter-from-class="opacity-0"
+      enter-to-class="opacity-100"
+  >
+    <div v-if="show" class="modal-mask">
+      <div class="modal-container">
+        <slot></slot>
 
-      <footer class="modal-footer">
-        <slot name="footer">
-          <button @click="$emit('close')">Close</button>
-        </slot>
-      </footer>
+        <footer class="modal-footer">
+          <slot name="footer">
+            <button @click="$emit('close')">Close</button>
+          </slot>
+        </footer>
+      </div>
     </div>
-  </div>
+  </transition>
 </template>
 
 <style>
