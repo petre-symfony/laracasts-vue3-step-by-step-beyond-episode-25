@@ -6,8 +6,8 @@
 
 <template>
   <transition
-      enter-from-class="opacity-0"
-      enter-to-class="opacity-100"
+      enter-from-class="transition duration-1000 opacity-0"
+      enter-to-class="transition duration-1000 opacity-100"
   >
     <div v-if="show" class="modal-mask">
       <div class="modal-container">
